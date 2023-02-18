@@ -25,12 +25,45 @@
  *? Виведіть у консоль усі парні числа від min до max
  */
 
-function number(min, max) {
-  for (let i = max; i >= min; i -= 1) {
-    if (i % 2 === 0) {
-      console.log(i);
-    }
-  }
-}
+// function number(min, max) {
+//   for (let i = max; i >= min; i -= 1) {
+//     if (i % 2 === 0) {
+//       console.log(i);
+//     }
+//   }
+// }
 
-number(1, 10);
+
+/**
+ *? Напишіть програму, яка отримає від користувача
+ *? число (кількість хвилин) та виведе в консоль
+ *? рядок у форматі годин та хвилин
+ *? https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+ *? 70 === 01:10
+ */
+
+//  function time(number){
+
+//     let minutes = String(number % 60).padStart(2, 0);
+
+//     let hours = String(Math.floor(number / 60)).padStart(2, 0);
+//     console.log(`${hours}:${minutes}`);
+    
+//  }
+//  time(90);
+
+/**
+ *? При завантаженні сторінки користувачеві пропонується
+ *? в prompt ввести число. Введення додається до значення
+ *? змінної total.
+ *? Операція введення числа триває до того часу,
+ *? поки користувач не натисне кнопку Cancel у prompt.
+ *? Після того як користувач припинив введення, натиснувши на
+ *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+ 
+ *! Робити перевірку, що користувач ввів саме число,
+ *! а не довільний набір символів не потрібно.
+ */
+
+
+ promt 
