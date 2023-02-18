@@ -65,5 +65,11 @@
  *! а не довільний набір символів не потрібно.
  */
 
-
- promt 
+let value;
+let total = 0;
+do {
+    value = prompt('Введіть число :');
+    total = total + Number(value);
+}
+while (value !== null)
+alert(`Загальна сума введених чисел дорівнює ${total}`);
