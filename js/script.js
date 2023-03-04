@@ -157,39 +157,70 @@
 // 	return newObj;
 // };
 
-
 ///**
 // *? Зробіть знижку 20% на всі фрукти у масиві
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+
+// function calcFruits(arr) {
+//    /* const arrNew = [];
+//     let i = 0;
+//     for (let elem of arr) {
+//         i += 1;
+//         arrNew.push({
+//             ...elem,
+//             price: elem.price * 0.8,
+//             //id : Date.now(),
+//             id: i,
+//         })
+//     }*/
+//     let i = 0;
+//     const arrNew = arr.map(item => {
+//         i += 1;
+//         return { ...item,
+//             price: item.price * 0.8,
+//             //id : Date.now(),
+//             id: i,
+//         }
+//  })
+//     return arrNew;
+// }
+// console.table(calcFruits(fruits));
+
+// tasr next
+
+//TODO:==============================================
+/**
+*? Поверніть об'єкт, в якому вказано кількість тегів.
+*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+ */
+const tweets = [
+  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  { id: '001', likes: 2, tags: ['html', 'css'] },
+  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+  { id: '003', likes: 8, tags: ['css', 'react'] },
+  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
 ];
 
-function calcFruits(arr) {
-   /* const arrNew = [];
-    let i = 0;
-    for (let elem of arr) {
-        i += 1;
-        arrNew.push({
-            ...elem,
-            price: elem.price * 0.8,
-            //id : Date.now(),
-            id: i,
-        })
-    }*/
-    let i = 0;
-    const arrNew = arr.map(item => {
-        i += 1;
-        return { ...item,
-            price: item.price * 0.8,
-            //id : Date.now(),
-            id: i,
-        }
- })
-    return arrNew;
+function crTags(arr) {
+  const obj = {};
+  const newObj = arr
+    .flatMap((el) => el.tags)
+    .reduce((acc, tag) => {
+      return {
+        ...acc,
+        [tag]: acc[tag] ? (acc[tag] += 1) : 1,
+      };
+    }, {});
+
+  return newObj;
 }
-console.table(calcFruits(fruits));
+
+console.log(crTags(tweets));
