@@ -33,7 +33,6 @@
 //   }
 // }
 
-
 /**
  *? Напишіть програму, яка отримає від користувача
  *? число (кількість хвилин) та виведе в консоль
@@ -48,7 +47,7 @@
 
 //     let hours = String(Math.floor(number / 60)).padStart(2, 0);
 //     console.log(`${hours}:${minutes}`);
-    
+
 //  }
 //  time(90);
 
@@ -103,7 +102,7 @@
 // user.premium = false;
 // //4
 // for (key of Object.keys(user)) {
-//    console.log(`${key}: ${user[key]}` ) 
+//    console.log(`${key}: ${user[key]}` )
 // }
 
 /*
@@ -114,16 +113,46 @@
  *? Якщо об'єкт salaries порожній, то результат має бути 0
  */
 
-const salaries = {
-  Mango: 100,
-  Poly: 160,
-  Ajax: 1470,
-};
-function calcSalaries(obj) {
-  let sum = 0;
-  for (key of Object.values(obj)) {
-     sum += key; 
-  } 
-  return sum;
-}
-console.log(calcSalaries(salaries));
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+// function calcSalaries(obj) {
+//   let sum = 0;
+//   for (key of Object.values(obj)) {
+//      sum += key;
+//   }
+//   return sum;
+// }
+// console.log(calcSalaries(salaries));
+
+/**
+ *? Напишіть функцію updateObject, яка приймає об'єкт та повертає
+ *? новий об'єкт без вказаного параметра
+ *? Очікуваний результат updateObject({a: 1, b: 2, c: 3}, 'b') => {a: 1}
+ *? https://coderoad.ru/208105/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0-JavaScript
+ */
+
+// const obj = { a: 1, b: 2, c: 3 };
+
+// const upObject = (obj, removeKey) => {
+// 	const keys = Object.keys(obj).filter((item) => removeKey !== item);
+// 	let obj2 = {};
+// 	for (let key of keys) {
+// 		// obj2 = {
+// 		// 	...obj2,
+// 		// 	[key]: obj[key],
+// 		// };
+// 		obj2[key] = obj[key];
+// 	}
+// 	console.log(obj2);
+// };
+
+// upObject(obj, "c");
+
+// const updateObject = (obj, removeKey) => {
+// 	let newObj = { ...obj };
+// 	delete newObj[removeKey];
+// 	return newObj;
+// };
