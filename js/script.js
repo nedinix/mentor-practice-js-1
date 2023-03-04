@@ -65,11 +65,45 @@
  *! а не довільний набір символів не потрібно.
  */
 
-let value;
-let total = 0;
-do {
-    value = prompt('Введіть число :');
-    total = total + Number(value);
+// let value;
+// let total = 0;
+// do {
+//     value = prompt('Введіть число :');
+//     total = total + Number(value);
+// }
+// while (value !== null)
+// alert(`Загальна сума введених чисел дорівнює ${total}`);
+
+// 04-03-2023
+
+//Task 1
+
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
+ */
+
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tennis",
+  premium: true,
+};
+
+//1
+user.mood = 'happy';
+//2
+user.hobby = 'skydiving';
+//3
+user.premium = false;
+//4
+for (key of Object.keys(user)) {
+   console.log(`${key}: ${user[key]}` ) 
 }
-while (value !== null)
-alert(`Загальна сума введених чисел дорівнює ${total}`);
+
+
