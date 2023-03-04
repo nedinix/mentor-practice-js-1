@@ -156,3 +156,40 @@
 // 	delete newObj[removeKey];
 // 	return newObj;
 // };
+
+
+///**
+// *? Зробіть знижку 20% на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+function calcFruits(arr) {
+   /* const arrNew = [];
+    let i = 0;
+    for (let elem of arr) {
+        i += 1;
+        arrNew.push({
+            ...elem,
+            price: elem.price * 0.8,
+            //id : Date.now(),
+            id: i,
+        })
+    }*/
+    let i = 0;
+    const arrNew = arr.map(item => {
+        i += 1;
+        return { ...item,
+            price: item.price * 0.8,
+            //id : Date.now(),
+            id: i,
+        }
+ })
+    return arrNew;
+}
+console.table(calcFruits(fruits));
